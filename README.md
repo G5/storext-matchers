@@ -22,7 +22,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+RSpec.describe Author do
+  describe "attributes" do
+    it { is_expected.to have_attribute(:name, String).in(:data).with_default("Anonymous") }
+  end
+end
+```
 
 ## Development
 
