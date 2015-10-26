@@ -23,7 +23,10 @@ Or install it yourself as:
 ```ruby
 RSpec.describe Author do
   describe "attributes" do
-    it { is_expected.to have_attribute(:name, String).in(:data).with_default("Anonymous") }
+    it do
+      is_expected.to have_attribute(:name, String).
+      in_column(:data).with_default("Anonymous")
+    end
   end
 end
 ```
