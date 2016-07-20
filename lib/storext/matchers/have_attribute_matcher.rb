@@ -58,7 +58,8 @@ module Storext::Matchers
 
     def matches_default?(default)
       return true if @expected_default.nil?
-      @expected_default == default
+      instance = @klass.new
+      instance.send(@name) == @expected_default
     end
 
   end
